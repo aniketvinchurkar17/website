@@ -1,407 +1,62 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aniket Vinchurkar — Generalist | Startups | Systems Thinking</title>
-  <meta name="description" content="Aniket Vinchurkar — strategy generalist for fast-moving startups. Founder’s Office @ PhiCommerce. Ex-BCG, CashFlo.io. Building Eisenhower-based to-do app. Writing about India’s startup ecosystem." />
-  <meta property="og:title" content="Aniket Vinchurkar — Generalist | Startups | Systems Thinking" />
-  <meta property="og:description" content="Strategy, startups, systems. Founder’s Office @ PhiCommerce. Ex-BCG, CashFlo.io. IIT Guwahati." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://aniketvinchurkar.com" />
-  <meta name="theme-color" content="#0ea5e9" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    // Tailwind config for dark mode
-    tailwind.config = { darkMode: 'class' };
-  </script>
-  <style>
-    :root { --ring: 0 0% 0%; }
-    html, body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; }
-  </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Aniket Vinchurkar",
-    "url": "https://aniketvinchurkar.com",
-    "jobTitle": "Strategy & Founder’s Office Generalist",
-    "affiliation": [{"@type":"Organization","name":"PhiCommerce"}],
-    "alumniOf": {"@type":"CollegeOrUniversity","name":"IIT Guwahati"},
-    "sameAs": ["https://www.linkedin.com/in/ahvinchurkar"]
-  }
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aniket Vinchurkar | Personal Website</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-white text-gray-900 dark:bg-neutral-950 dark:text-neutral-100">
+<body>
+  <header>
+    <div class="hero">
+      <!-- Portrait Image -->
+      <img src="images/portrait.jpg" alt="Aniket Vinchurkar" class="portrait">
 
-  <!-- Top Nav -->
-  <header class="sticky top-0 z-50 backdrop-blur bg-white/70 dark:bg-neutral-950/60 border-b border-black/5 dark:border-white/5">
-    <nav class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
-      <a href="#home" class="font-extrabold tracking-tight text-xl">Aniket Vinchurkar</a>
-      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
-        <a href="#about" class="hover:opacity-80">About</a>
-        <a href="#work" class="hover:opacity-80">Work</a>
-        <a href="#projects" class="hover:opacity-80">Projects</a>
-        <a href="#writing" class="hover:opacity-80">Writing</a>
-        <a href="#toolbox" class="hover:opacity-80">Toolbox</a>
-        <a href="#contact" class="hover:opacity-80">Contact</a>
-        <button id="themeToggle" aria-label="Toggle dark mode" class="rounded-xl px-3 py-1 border border-black/10 dark:border-white/10">
-          <span id="themeIcon">🌙</span>
-        </button>
+      <div>
+        <h1>Aniket Vinchurkar</h1>
+        <p class="tagline">Generalist | Startup Ecosystem | Builder</p>
+        <div class="social-links">
+          <a href="mailto:aniketvinchurkar17@gmail.com">Email</a>
+          <a href="https://twitter.com/AniVinchurkar">Twitter</a>
+          <a href="https://www.linkedin.com/in/Ahvinchurkar">LinkedIn</a>
+        </div>
       </div>
-    </nav>
+    </div>
   </header>
 
-  <!-- Hero -->
-  <section id="home" class="relative overflow-hidden">
-    <div class="max-w-6xl mx-auto px-6 pt-20 pb-14 md:pt-28 md:pb-24">
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
-            Strategy, Startups, <span class="text-sky-600">Systems</span>.
-          </h1>
-          <p class="mt-5 text-lg md:text-xl text-gray-600 dark:text-neutral-300">
-            I’m a <span class="font-semibold">generalist</span> who thrives in ambiguity—building structure, shipping outcomes, and keeping teams sane while the market zigzags.
-          </p>
-          <ul class="mt-5 space-y-2 text-gray-700 dark:text-neutral-300">
-            <li>• Founder’s Office @ PhiCommerce → <span class="font-semibold">50%+ TAT reduction</span>, <span class="font-semibold">37% manual-ops reduction</span>, 11+ senior hires.</li>
-            <li>• Ex-BCG & CashFlo.io → GTM, pricing, post-merger integration, investor MIS.</li>
-            <li>• IIT Guwahati alum. Maker of an <span class="font-semibold">Eisenhower Matrix</span> to‑do app.</li>
-          </ul>
-          <div class="mt-7 flex flex-wrap gap-3">
-            <a href="#matrix" class="px-5 py-3 rounded-2xl bg-sky-600 text-white font-semibold hover:bg-sky-700">Try the Matrix</a>
-            <a href="#writing" class="px-5 py-3 rounded-2xl border border-black/10 dark:border-white/10 font-semibold">Read my notes</a>
-          </div>
-        </div>
-        <div class="md:justify-self-end">
-          <div class="w-40 h-40 md:w-52 md:h-52 rounded-3xl bg-gradient-to-br from-sky-500/20 to-indigo-500/20 border border-black/10 dark:border-white/10 grid place-content-center text-5xl">AV</div>
-          <div class="mt-6 grid grid-cols-3 gap-3 text-xs text-gray-500 dark:text-neutral-400">
-            <div class="p-3 rounded-2xl border border-black/10 dark:border-white/10">Fintech</div>
-            <div class="p-3 rounded-2xl border border-black/10 dark:border-white/10">SaaS</div>
-            <div class="p-3 rounded-2xl border border-black/10 dark:border-white/10">AI Adoption</div>
-            <div class="p-3 rounded-2xl border border-black/10 dark:border-white/10">GTM</div>
-            <div class="p-3 rounded-2xl border border-black/10 dark:border-white/10">Ops Design</div>
-            <div class="p-3 rounded-2xl border border-black/10 dark:border-white/10">Investor Prep</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I thrive at the intersection of strategy, product, and execution. 
+        Currently in the Founder's Office at PhiCommerce, where I drive AI adoption, investor relations, 
+        org design, and cross-functional execution. 
+        Previously at CashFlo.io (post-merger integration, GTM, pricing) and BCG (sales strategy, corporate lending transformation, media rights strategy).
+      </p>
+    </section>
 
-  <!-- About -->
-  <section id="about" class="py-16 bg-gray-50 dark:bg-neutral-900/40 border-y border-black/5 dark:border-white/5">
-    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10 items-start">
-      <div class="md:col-span-2">
-        <h2 class="text-3xl font-bold">About</h2>
-        <p class="mt-4 text-lg text-gray-700 dark:text-neutral-300">
-          I partner with founders to turn hand-wavy ambition into repeatable execution. I design operating rhythms (KPIs, KRAs, cadences), land big deals and RFPs, and make AI useful across onboarding, CS, QA, Ops, FinOps, and Tech Support.
-        </p>
-        <p class="mt-4 text-gray-700 dark:text-neutral-300">
-          My edge: I connect strategy → systems → shipping. Less theatre, more throughput.
-        </p>
-      </div>
-      <aside class="space-y-3 text-sm">
-        <div class="p-4 rounded-2xl border border-black/10 dark:border-white/10">
-          <div class="font-semibold">Now</div>
-          <div class="text-gray-600 dark:text-neutral-400">Founder’s Office @ PhiCommerce</div>
-        </div>
-        <div class="p-4 rounded-2xl border border-black/10 dark:border-white/10">
-          <div class="font-semibold">Prior</div>
-          <div class="text-gray-600 dark:text-neutral-400">CashFlo.io · BCG</div>
-        </div>
-        <div class="p-4 rounded-2xl border border-black/10 dark:border-white/10">
-          <div class="font-semibold">Education</div>
-          <div class="text-gray-600 dark:text-neutral-400">IIT Guwahati (B.Tech, Mech.)</div>
-        </div>
-      </aside>
-    </div>
-  </section>
+    <section id="experience">
+      <h2>Experience Highlights</h2>
+      <ul>
+        <li><strong>PhiCommerce (2024–Present):</strong> Led AI adoption across functions, drove org restructuring, structured B2B deals, and supported fundraising.</li>
+        <li><strong>CashFlo.io (2024):</strong> Orchestrated post-merger integration across 35+ stakeholders, designed pricing & incentive strategies, built investor MIS.</li>
+        <li><strong>BCG (2022–2024):</strong> Drove sales strategy, corporate lending transformation, and product strategy for a media giant.</li>
+      </ul>
+    </section>
 
-  <!-- Work Highlights -->
-  <section id="work" class="py-16">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-bold">Selected Work</h2>
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <div class="p-6 rounded-2xl border border-black/10 dark:border-white/10">
-          <div class="text-sm uppercase tracking-wide text-gray-500 dark:text-neutral-400">PhiCommerce</div>
-          <h3 class="mt-1 font-semibold">Scaled operations & AI</h3>
-          <ul class="mt-3 space-y-2 text-gray-700 dark:text-neutral-300 text-sm">
-            <li>• Led AI adoption across 6+ teams → <span class="font-semibold">50%+ TAT</span> reduction.</li>
-            <li>• Cut manual ops by <span class="font-semibold">37%</span>; instituted governance rhythms.</li>
-            <li>• Closed 11+ senior hires in 3 months.</li>
-          </ul>
-        </div>
-        <div class="p-6 rounded-2xl border border-black/10 dark:border-white/10">
-          <div class="text-sm uppercase tracking-wide text-gray-500 dark:text-neutral-400">CashFlo.io</div>
-          <h3 class="mt-1 font-semibold">Post‑merger integration</h3>
-          <ul class="mt-3 space-y-2 text-gray-700 dark:text-neutral-300 text-sm">
-            <li>• Orchestrated 35+ stakeholders; closed 11 initiatives.</li>
-            <li>• Pricing & incentives → revenue + efficiency lift.</li>
-            <li>• Investor MIS & dashboards → reporting TAT −60%.</li>
-          </ul>
-        </div>
-        <div class="p-6 rounded-2xl border border-black/10 dark:border-white/10">
-          <div class="text-sm uppercase tracking-wide text-gray-500 dark:text-neutral-400">BCG</div>
-          <h3 class="mt-1 font-semibold">Strategy & transformation</h3>
-          <ul class="mt-3 space-y-2 text-gray-700 dark:text-neutral-300 text-sm">
-            <li>• Sales strategy for a battery manufacturer (200+ districts).</li>
-            <li>• Corporate lending transformation: CAM automation & UX revamp.</li>
-            <li>• Product roadmap & rights strategy for a major media player.</li>
-          </ul>
-        </div>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Let’s connect for conversations on strategy, startups, and scaling ideas.</p>
+      <div class="social-links">
+        <a href="mailto:aniketvinchurkar17@gmail.com">aniketvinchurkar17@gmail.com</a> |
+        <a href="https://twitter.com/AniVinchurkar">Twitter</a> |
+        <a href="https://www.linkedin.com/in/Ahvinchurkar">LinkedIn</a>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Projects (includes interactive Eisenhower matrix) -->
-  <section id="projects" class="py-16 bg-gray-50 dark:bg-neutral-900/40 border-y border-black/5 dark:border-white/5">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="md:flex md:items-end md:justify-between gap-6">
-        <h2 class="text-3xl font-bold">Projects</h2>
-        <a href="#matrix" class="mt-3 md:mt-0 text-sm font-semibold text-sky-700 dark:text-sky-400 hover:underline">Jump to Eisenhower</a>
-      </div>
-
-      <div class="mt-8 grid md:grid-cols-2 gap-6">
-        <article class="p-6 rounded-2xl border border-black/10 dark:border-white/10 bg-white dark:bg-neutral-950">
-          <h3 class="font-semibold text-lg">Eisenhower Matrix To‑Do (mini)</h3>
-          <p class="text-sm text-gray-600 dark:text-neutral-400">A fast, local‑first prioritizer for busy humans. Add tasks, sort by urgency/importance, and ship what matters.</p>
-          <div id="matrix" class="mt-4 grid grid-cols-2 gap-3">
-            <!-- Quadrants rendered by JS -->
-          </div>
-          <div class="mt-4 flex gap-2 text-sm">
-            <input id="taskInput" type="text" placeholder="Add a task…" class="flex-1 px-3 py-2 rounded-xl border border-black/10 dark:border-white/10 bg-white dark:bg-neutral-900" />
-            <select id="quadSelect" class="px-3 py-2 rounded-xl border border-black/10 dark:border-white/10 bg-white dark:bg-neutral-900">
-              <option value="IU">Urgent + Important</option>
-              <option value="IN">Important, Not Urgent</option>
-              <option value="NU">Urgent, Not Important</option>
-              <option value="NN">Neither</option>
-            </select>
-            <button id="addTaskBtn" class="px-4 py-2 rounded-xl bg-sky-600 text-white font-semibold">Add</button>
-          </div>
-          <div class="mt-2 text-xs text-gray-500 dark:text-neutral-500">Data lives in your browser (localStorage). Zero server. Zero excuses.</div>
-        </article>
-
-        <article class="p-6 rounded-2xl border border-black/10 dark:border-white/10 bg-white dark:bg-neutral-950">
-          <h3 class="font-semibold text-lg">Startup Ecosystem Notes (India)</h3>
-          <p class="text-sm text-gray-600 dark:text-neutral-400">Lightweight memos and mental models on SaaS, fintech, logistics, and quick commerce.</p>
-          <ul id="notesList" class="mt-4 space-y-3 text-sm">
-            <!-- Notes rendered by JS -->
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Writing -->
-  <section id="writing" class="py-16">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="md:flex md:items-end md:justify-between gap-6">
-        <h2 class="text-3xl font-bold">Writing</h2>
-        <a href="#contact" class="mt-3 md:mt-0 text-sm font-semibold text-sky-700 dark:text-sky-400 hover:underline">Invite me to write/speak</a>
-      </div>
-      <div id="posts" class="mt-8 grid md:grid-cols-3 gap-6">
-        <!-- Posts rendered by JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Toolbox -->
-  <section id="toolbox" class="py-16 bg-gray-50 dark:bg-neutral-900/40 border-y border-black/5 dark:border-white/5">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-bold">Toolbox</h2>
-      <p class="mt-3 text-gray-700 dark:text-neutral-300">Strategy, governance, and gritty execution. A few sharp tools I reach for:</p>
-      <div class="mt-6 flex flex-wrap gap-3 text-sm">
-        <span class="px-3 py-2 rounded-2xl border border-black/10 dark:border-white/10">Operating rhythms (OKRs/KPIs/KRAs)</span>
-        <span class="px-3 py-2 rounded-2xl border border-black/10 dark:border-white/10">AI adoption playbooks</span>
-        <span class="px-3 py-2 rounded-2xl border border-black/10 dark:border-white/10">GTM design & pricing</span>
-        <span class="px-3 py-2 rounded-2xl border border-black/10 dark:border-white/10">Investor prep & MIS</span>
-        <span class="px-3 py-2 rounded-2xl border border-black/10 dark:border-white/10">Org design & hiring</span>
-        <span class="px-3 py-2 rounded-2xl border border-black/10 dark:border-white/10">RFPs & enterprise deals</span>
-        <span class="px-3 py-2 rounded-2xl border border-black/10 dark:border-white/10">Foreign market entry</span>
-        <span class="px-3 py-2 rounded-2xl border border-black/10 dark:border-white/10">Process automation</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="py-16">
-    <div class="max-w-3xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold">Let’s Build</h2>
-      <p class="mt-3 text-gray-700 dark:text-neutral-300">Advisory, special projects, or a zero‑drama operating system for your startup.</p>
-      <div class="mt-6 flex items-center justify-center gap-4">
-        <a href="mailto:aniketvinchurkar17@gmail.com" class="px-5 py-3 rounded-2xl bg-sky-600 text-white font-semibold hover:bg-sky-700">Email me</a>
-        <a href="https://www.linkedin.com/in/ahvinchurkar" target="_blank" rel="noopener" class="px-5 py-3 rounded-2xl border border-black/10 dark:border-white/10 font-semibold">LinkedIn</a>
-        <button id="copyEmail" class="px-5 py-3 rounded-2xl border border-black/10 dark:border-white/10 font-semibold">Copy email</button>
-      </div>
-      <p class="mt-3 text-xs text-gray-500 dark:text-neutral-500">I read everything. I reply faster than Indian quick commerce on a Sunday night.</p>
-    </div>
-  </section>
-
-  <footer class="py-10 text-center text-sm text-gray-500 dark:text-neutral-400 border-t border-black/5 dark:border-white/5">
-    © <span id="year"></span> Aniket Vinchurkar • Built with curiosity, caffeine, and compounding.
+  <footer>
+    <p>© 2025 Aniket Vinchurkar</p>
   </footer>
-
-  <script>
-    // --- Theme toggle ---
-    const themeBtn = document.getElementById('themeToggle');
-    const themeIcon = document.getElementById('themeIcon');
-
-    function setTheme(mode){
-      if(mode === 'dark'){ document.documentElement.classList.add('dark'); localStorage.setItem('theme','dark'); themeIcon.textContent = '☀️'; }
-      else { document.documentElement.classList.remove('dark'); localStorage.setItem('theme','light'); themeIcon.textContent = '🌙'; }
-    }
-    (function(){
-      const stored = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setTheme(stored || (prefersDark ? 'dark' : 'light'));
-    })();
-    themeBtn?.addEventListener('click', ()=>{
-      const isDark = document.documentElement.classList.contains('dark');
-      setTheme(isDark ? 'light' : 'dark');
-    });
-
-    // --- Footer year ---
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // --- Copy email ---
-    document.getElementById('copyEmail')?.addEventListener('click', async ()=>{
-      try { await navigator.clipboard.writeText('aniketvinchurkar17@gmail.com'); alert('Email copied. Your move.'); } catch(e){ console.log(e);} 
-    });
-
-    // --- Eisenhower matrix mini-app ---
-    const QUADS = {
-      IU: { label: 'Urgent + Important', color: 'from-red-500/10 to-orange-500/10', ring: 'ring-red-500/30' },
-      IN: { label: 'Important, Not Urgent', color: 'from-emerald-500/10 to-teal-500/10', ring: 'ring-emerald-500/30' },
-      NU: { label: 'Urgent, Not Important', color: 'from-amber-500/10 to-yellow-500/10', ring: 'ring-amber-500/30' },
-      NN: { label: 'Neither', color: 'from-slate-500/10 to-zinc-500/10', ring: 'ring-slate-500/30' },
-    };
-
-    const matrixEl = document.getElementById('matrix');
-    const inputEl = document.getElementById('taskInput');
-    const selectEl = document.getElementById('quadSelect');
-    const addBtn = document.getElementById('addTaskBtn');
-
-    function loadTasks(){
-      try { return JSON.parse(localStorage.getItem('eisenhowerTasks')||'{}'); } catch { return {}; }
-    }
-    function saveTasks(tasks){ localStorage.setItem('eisenhowerTasks', JSON.stringify(tasks)); }
-
-    function renderMatrix(){
-      const tasks = loadTasks();
-      matrixEl.innerHTML = '';
-      Object.entries(QUADS).forEach(([key, meta])=>{
-        const card = document.createElement('div');
-        card.className = `rounded-2xl border border-black/10 dark:border-white/10 p-3 bg-gradient-to-br ${meta.color}`;
-        card.innerHTML = `
-          <div class="flex items-center justify-between gap-2">
-            <h4 class="font-semibold text-sm">${meta.label}</h4>
-            <button data-clear="${key}" class="text-xs px-2 py-1 rounded-md border border-black/10 dark:border-white/10">Clear</button>
-          </div>
-          <ul id="list-${key}" class="mt-2 space-y-2"></ul>
-        `;
-        matrixEl.appendChild(card);
-
-        const list = card.querySelector(`#list-${key}`);
-        (tasks[key]||[]).forEach((t, idx)=>{
-          const li = document.createElement('li');
-          li.className = 'group flex items-center justify-between gap-3 px-3 py-2 rounded-xl bg-white/70 dark:bg-neutral-900/70 border border-black/10 dark:border-white/10';
-          li.innerHTML = `
-            <span class="text-sm">${t}</span>
-            <div class="flex items-center gap-2 opacity-70 group-hover:opacity-100">
-              <button data-move="${key}" data-idx="${idx}" class="text-xs px-2 py-1 rounded-md border border-black/10 dark:border-white/10">Move</button>
-              <button data-del="${key}" data-idx="${idx}" class="text-xs px-2 py-1 rounded-md border border-black/10 dark:border-white/10">Done</button>
-            </div>`;
-          list.appendChild(li);
-        });
-      });
-
-      // Wire buttons
-      matrixEl.querySelectorAll('[data-clear]')?.forEach(btn=>{
-        btn.addEventListener('click', (e)=>{
-          const q = e.currentTarget.getAttribute('data-clear');
-          const tasks = loadTasks();
-          tasks[q] = [];
-          saveTasks(tasks); renderMatrix();
-        });
-      });
-      matrixEl.querySelectorAll('[data-del]')?.forEach(btn=>{
-        btn.addEventListener('click', (e)=>{
-          const q = e.currentTarget.getAttribute('data-del');
-          const idx = +e.currentTarget.getAttribute('data-idx');
-          const tasks = loadTasks();
-          (tasks[q]||[]).splice(idx,1);
-          saveTasks(tasks); renderMatrix();
-        });
-      });
-      matrixEl.querySelectorAll('[data-move]')?.forEach(btn=>{
-        btn.addEventListener('click', (e)=>{
-          const from = e.currentTarget.getAttribute('data-move');
-          const idx = +e.currentTarget.getAttribute('data-idx');
-          const tasks = loadTasks();
-          const item = (tasks[from]||[]).splice(idx,1)[0];
-          const order = ['IU','IN','NU','NN'];
-          const to = order[(order.indexOf(from)+1)%order.length];
-          tasks[to] = [...(tasks[to]||[]), item];
-          saveTasks(tasks); renderMatrix();
-        });
-      });
-    }
-
-    // Seed once for first-time visitors (non-destructive)
-    (function seed(){
-      if(localStorage.getItem('eisenhowerSeeded')) return;
-      const sample = { IU:['Investor deck review','Resolve critical support ticket'], IN:['Write ecosystem memo'], NU:['Slack responses'], NN:['Rearrange desktop icons'] };
-      const existing = loadTasks();
-      const merged = Object.fromEntries(Object.keys(QUADS).map(k=>[k,[...(existing[k]||[]),...(sample[k]||[])]]));
-      saveTasks(merged); localStorage.setItem('eisenhowerSeeded','1');
-    })();
-
-    addBtn?.addEventListener('click', ()=>{
-      const txt = (inputEl.value||'').trim();
-      if(!txt) return;
-      const q = selectEl.value;
-      const tasks = loadTasks();
-      tasks[q] = [...(tasks[q]||[]), txt];
-      saveTasks(tasks); inputEl.value=''; renderMatrix();
-    });
-    inputEl?.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ addBtn.click(); }});
-
-    renderMatrix();
-
-    // --- Ecosystem notes & posts ---
-    const notes = [
-      { title: 'Quick commerce: unit economics beyond metros', tag: 'Quick Commerce', reading: '3 min' },
-      { title: 'SaaS pricing in India: USD mind, INR market', tag: 'SaaS', reading: '5 min' },
-      { title: 'FinOps for fintech: reconciliations that don’t break weekends', tag: 'Fintech', reading: '4 min' },
-      { title: 'AI in support: deflection without defiance', tag: 'AI', reading: '3 min' },
-    ];
-    const notesEl = document.getElementById('notesList');
-    notes.forEach(n=>{
-      const li = document.createElement('li');
-      li.className = 'p-4 rounded-2xl border border-black/10 dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/5 transition';
-      li.innerHTML = `<div class="flex items-center justify-between gap-3"><div>
-        <div class="font-medium">${n.title}</div>
-        <div class="text-xs text-gray-500 dark:text-neutral-400">${n.tag} • ${n.reading}</div></div>
-        <span class="text-sm">→</span></div>`;
-      notesEl.appendChild(li);
-    });
-
-    const posts = [
-      { title: 'Why Generalists Win in the First 100 Employees', teaser: 'Breadth gives leverage when entropy is high.', href: '#' },
-      { title: 'AI in B2B SaaS: Taming Chaos, Not Replacing Humans', teaser: 'Deploy AI where queues and quality collide.', href: '#' },
-      { title: 'Tier‑2 Monetization: The INR Reality Check', teaser: 'Pricing power meets purchasing power.', href: '#' },
-    ];
-    const postsEl = document.getElementById('posts');
-    posts.forEach(p=>{
-      const a = document.createElement('a');
-      a.href = p.href;
-      a.className = 'block p-6 rounded-2xl border border-black/10 dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/5 transition';
-      a.innerHTML = `<div class="font-semibold">${p.title}</div><p class="mt-2 text-sm text-gray-600 dark:text-neutral-400">${p.teaser}</p><div class="mt-3 text-xs">Read →</div>`;
-      postsEl.appendChild(a);
-    });
-  </script>
 </body>
 </html>
