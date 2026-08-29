@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UnDo &mdash; Aniket Vinchurkar</title>
+<meta name="description" content="A Chrome extension that forces every task into an Eisenhower quadrant before you are allowed to write it down.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+<a class="backlink" href="../">&larr; Aniket Vinchurkar</a>
+
+<article>
+  <header>
+    <p class="kicker">Built</p>
+    <h1>UnDo</h1>
+    <p class="standfirst">A Chrome extension that will not let you write down a task until
+    you have said whether it is urgent and whether it is important.</p>
+    <p class="byline">Aniket Vinchurkar</p>
+  </header>
+
+  <p>
+    Every to-do list I have used has the same defect: it is a flat list, so everything on it
+    looks equally deserving. The list grows, priority becomes a feeling, and the day gets
+    spent on whatever is loudest.
+  </p>
+
+  <p>
+    Eisenhower's matrix fixes this by refusing the flat list. Two axes &mdash; urgent or not,
+    important or not &mdash; and four quadrants that each imply a different verb: do it,
+    schedule it, delegate it, delete it. The framework is old and well known. The reason
+    almost nobody runs it is that classifying tasks is friction, and every tool that supports
+    the matrix makes it optional.
+  </p>
+
+  <p>
+    So UnDo makes it mandatory. There is no way to add a task without placing it. The
+    quadrant is not a label you might apply later; it is the act of capture.
+  </p>
+
+  <h2>How it works</h2>
+
+  <ul>
+    <li><strong>Capture forces a decision.</strong> Adding a task asks two questions before it
+    accepts the text. Two clicks, and the task lands in a quadrant.</li>
+    <li><strong>The board is the interface.</strong> Four quadrants, always visible, one
+    click from any tab. Not a list that happens to be colour-coded.</li>
+    <li><strong>Each quadrant suggests its verb.</strong> Urgent and important gets done now.
+    Important and not urgent gets a date. Urgent and not important gets handed off. Neither
+    gets deleted &mdash; and the tool is comfortable telling you so.</li>
+    <li><strong>Drag to reclassify.</strong> Priority moves. A task sliding from
+    <em>schedule</em> into <em>do now</em> is exactly the signal you want to see coming.</li>
+    <li><strong>Local storage.</strong> Tasks live in the browser. No account, no server, no
+    sync, nothing leaves the machine.</li>
+  </ul>
+
+  <h2>What I learned building it</h2>
+
+  <p>
+    The interesting finding was not about productivity software. It was that the bottom-right
+    quadrant &mdash; not urgent, not important &mdash; filled up faster than any other, and
+    that people (me included) resist emptying it. A flat list lets you keep those tasks in a
+    respectable-looking queue forever. A matrix puts them in a box labelled <em>delete</em>
+    and makes you look at it.
+  </p>
+
+  <p>
+    Most of the value of the tool turned out to be that single act of exposure. The rest is
+    plumbing.
+  </p>
+
+  <p class="footnote">
+    Built as a personal tool. If you want the current build or the source, <a href="mailto:aniketvinchurkar17@gmail.com">email me</a>.
+  </p>
+
+</article>
+
+<footer>
+  <span><a href="../">Home</a></span>
+  <span><a href="mailto:aniketvinchurkar17@gmail.com">Email</a></span>
+  <span><a href="https://www.linkedin.com/in/ahvinchurkar">LinkedIn</a></span>
+</footer>
+
+</div>
+</body>
+</html>
