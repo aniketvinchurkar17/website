@@ -1,77 +1,270 @@
+/* ---------------------------------------------------------------
+   aniketvinchurkar.com
+   Type and colour lifted from the CV: Bitstream Charter, pure black
+   on white, hairline rules, #e5e5e5 chips. Nothing else.
+   --------------------------------------------------------------- */
+
+:root {
+  --bg:      #ffffff;
+  --ink:     #000000;
+  --muted:   #5a5a5a;
+  --faint:   #8a8a8a;
+  --rule:    #000000;
+  --hairline:#d8d8d8;
+  --uline:   #9a9a9a;
+  --chip:    #e5e5e5;
+  --measure: 34rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:      #111111;
+    --ink:     #eeeeee;
+    --muted:   #a6a6a6;
+    --faint:   #7d7d7d;
+    --rule:    #eeeeee;
+    --hairline:#3a3a3a;
+    --uline:   #6f6f6f;
+    --chip:    #2a2a2a;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
   margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
-  color: #333;
+  padding: 3.5rem 1.5rem 5rem;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  font-size: 18px;
+  line-height: 1.62;
+  font-kerning: normal;
+  font-variant-numeric: oldstyle-num;
+  text-rendering: optimizeLegibility;
 }
 
-header {
-  background: #222;
-  color: #fff;
-  padding: 2rem 1rem;
-  text-align: center;
-}
+.wrap { max-width: var(--measure); margin: 0 auto; }
 
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-}
+/* ---------- masthead ---------- */
+
+.masthead { text-align: center; margin-bottom: 2.25rem; }
 
 .portrait {
-  width: 180px;
-  height: 180px;
+  width: 84px; height: 84px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: block;
+  margin: 0 auto 1rem;
+  filter: grayscale(100%);
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin: 0.5rem 0;
+.masthead h1 {
+  font-size: 2.15rem;
+  font-weight: normal;
+  line-height: 1.15;
+  margin: 0;
+  letter-spacing: -0.01em;
 }
 
-.tagline {
-  font-size: 1.2rem;
-  margin: 0.2rem 0 1rem;
+.masthead .subtitle {
+  margin: 0.15rem 0 0;
+  font-size: 1.12rem;
+}
+
+.masthead .meta {
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ---------- section headings: CV style, roman weight + hairline rule ---------- */
+
+h2 {
+  font-size: 1.22rem;
+  font-weight: normal;
+  margin: 2.6rem 0 0.55rem;
+  padding-bottom: 0.12rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1.8rem 0 0.35rem;
+}
+
+p { margin: 0 0 1.05rem; }
+
+.lede { margin-bottom: 1.4rem; }
+
+/* ---------- links ---------- */
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--uline);
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+a:hover { text-decoration-color: currentColor; }
+
+/* ---------- the flat index list ---------- */
+
+.list { list-style: none; margin: 0; padding: 0; }
+
+.list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.42rem 0;
+  border-bottom: 1px solid var(--hairline);
+}
+.list li:last-child { border-bottom: none; }
+
+.list .t { flex: 1 1 auto; }
+
+.list .t > a { font-size: 1.02rem; }
+
+.list .d {
+  flex: 0 0 auto;
+  font-size: 0.82rem;
+  color: var(--faint);
+  font-variant-numeric: oldstyle-num;
+  white-space: nowrap;
+}
+
+.list .note {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+/* ---------- CV-style role chips ---------- */
+
+.role {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin: 1.15rem 0 0.2rem;
+}
+
+.chip {
+  background: var(--chip);
+  padding: 0.05rem 0.4rem;
+  font-weight: bold;
+  font-size: 0.94rem;
+}
+
+.role .d {
+  margin-left: auto;
+  font-size: 0.82rem;
+  color: var(--faint);
+  white-space: nowrap;
+}
+
+.role-note {
+  margin: 0 0 0.55rem;
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+/* ---------- essay pages ---------- */
+
+.backlink {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 2.25rem;
+  text-decoration: none;
+}
+.backlink:hover { text-decoration: underline; }
+
+article header { margin-bottom: 1.9rem; }
+
+article header h1 {
+  font-size: 1.85rem;
+  font-weight: normal;
+  line-height: 1.22;
+  margin: 0 0 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+article header .kicker {
+  font-size: 0.78rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin: 0 0 0.5rem;
+}
+
+article header .standfirst {
+  font-size: 1.04rem;
+  color: var(--muted);
+  margin: 0 0 0.6rem;
+}
+
+article header .byline {
+  font-size: 0.82rem;
+  color: var(--faint);
+  margin: 0;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+article ul, article ol { padding-left: 1.15rem; margin: 0 0 1.05rem; }
+article li { margin-bottom: 0.42rem; }
+
+blockquote {
+  margin: 1.4rem 0;
+  padding-left: 1rem;
+  border-left: 2px solid var(--hairline);
+  color: var(--muted);
   font-style: italic;
 }
 
-.social-links a {
-  margin: 0 0.5rem;
-  color: #00aced;
-  text-decoration: none;
-  font-weight: bold;
+hr {
+  border: none;
+  border-top: 1px solid var(--hairline);
+  margin: 2.4rem 0;
 }
 
-.social-links a:hover {
-  text-decoration: underline;
+.callout {
+  border: 1px solid var(--hairline);
+  padding: 0.9rem 1.1rem;
+  margin: 1.6rem 0;
+  font-size: 0.94rem;
+  line-height: 1.55;
 }
+.callout p:last-child { margin-bottom: 0; }
 
-main {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
+.footnote { font-size: 0.86rem; color: var(--muted); }
 
-section {
-  margin-bottom: 2rem;
-}
-
-h2 {
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-  color: #222;
-}
+/* ---------- footer ---------- */
 
 footer {
-  text-align: center;
-  padding: 1rem;
-  background: #222;
-  color: #fff;
+  margin-top: 3.2rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.82rem;
+  color: var(--faint);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+}
+
+/* ---------- small screens ---------- */
+
+@media (max-width: 34rem) {
+  body { padding: 2.25rem 1.15rem 3.5rem; font-size: 17px; }
+  .masthead h1 { font-size: 1.8rem; }
+  article header h1 { font-size: 1.5rem; }
+  .list li { flex-direction: column; gap: 0.1rem; }
+  .list .d { order: -1; }
+  .role { flex-wrap: wrap; gap: 0.4rem; }
+  .role .d { margin-left: 0; width: 100%; }
 }
