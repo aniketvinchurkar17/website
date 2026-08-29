@@ -282,3 +282,34 @@ footer {
   .role { flex-wrap: wrap; gap: 0.4rem; }
   .role .d { margin-left: 0; width: 100%; }
 }
+
+/* ---------- quoted posts (X / LinkedIn) ---------- */
+
+.posts { margin-top: 0.4rem; }
+
+.post {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--hairline);
+}
+.post:last-child { border-bottom: none; }
+
+.post blockquote {
+  margin: 0 0 0.6rem;
+  padding: 0;
+  border: none;
+  font-style: normal;
+  color: var(--ink);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+.post blockquote p { margin: 0 0 0.7rem; }
+.post blockquote p:last-child { margin-bottom: 0; }
+
+.post .src {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  color: var(--faint);
+}
+.post .src a { text-decoration: none; }
+.post .src a:hover { text-decoration: underline; text-decoration-color: currentColor; }
