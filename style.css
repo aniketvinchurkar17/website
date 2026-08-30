@@ -282,3 +282,92 @@ footer {
   .role { flex-wrap: wrap; gap: 0.4rem; }
   .role .d { margin-left: 0; width: 100%; }
 }
+
+/* ---------- quoted posts (X / LinkedIn) ---------- */
+
+.posts { margin-top: 0.4rem; }
+
+.post {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--hairline);
+}
+.post:last-child { border-bottom: none; }
+
+.post blockquote {
+  margin: 0 0 0.6rem;
+  padding: 0;
+  border: none;
+  font-style: normal;
+  color: var(--ink);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+.post blockquote p { margin: 0 0 0.7rem; }
+.post blockquote p:last-child { margin-bottom: 0; }
+
+.post .src {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  color: var(--faint);
+}
+.post .src a { text-decoration: none; }
+.post .src a:hover { text-decoration: underline; text-decoration-color: currentColor; }
+
+/* ---------- contact rail ---------- */
+
+.rail-links {
+  list-style: none;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  font-size: 0.9rem;
+}
+.rail-links li { margin-bottom: 0.2rem; }
+
+/* ---------- wide screens: two columns on the home page ---------- */
+
+@media (min-width: 62rem) {
+  body { padding-top: 4.5rem; }
+
+  .wrap.home {
+    max-width: 60rem;
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .home .masthead {
+    position: sticky;
+    top: 4.5rem;
+    text-align: left;
+    margin-bottom: 0;
+  }
+  .home .masthead .portrait { margin-left: 0; margin-right: 0; }
+  .home .masthead h1 { font-size: 1.72rem; }
+  .home .masthead .subtitle { font-size: 0.98rem; }
+
+  .home-main { max-width: 36rem; min-width: 0; }
+  .home-main > h2:first-of-type { margin-top: 0; }
+
+  /* articles get a slightly longer line, and less dead space above */
+  .wrap:not(.home) { max-width: 36rem; }
+}
+
+/* ---------- people / profile entries ---------- */
+
+h2.person {
+  font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: normal;
+  text-transform: none;
+  letter-spacing: 0;
+  padding-bottom: 0.15rem;
+  margin-bottom: 0.35rem;
+}
+
+.dek {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 0.95rem;
+}
