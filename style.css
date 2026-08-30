@@ -314,15 +314,20 @@ footer {
 .post .src a { text-decoration: none; }
 .post .src a:hover { text-decoration: underline; text-decoration-color: currentColor; }
 
-/* ---------- contact rail ---------- */
+/* ---------- contact links ----------
+   A <nav> of bare <a>s, not a <ul>: with no CSS at all this still renders as
+   a plain row of links rather than a bulleted list. */
 
 .rail-links {
-  list-style: none;
-  margin: 1.1rem 0 0;
-  padding: 0;
-  font-size: 0.9rem;
+  margin-top: 1.15rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.3rem 1.15rem;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
 }
-.rail-links li { margin-bottom: 0.2rem; }
 
 /* ---------- wide screens: two columns on the home page ---------- */
 
@@ -330,10 +335,10 @@ footer {
   body { padding-top: 4.5rem; }
 
   .wrap.home {
-    max-width: 60rem;
+    max-width: 62rem;
     display: grid;
     grid-template-columns: 15rem 1fr;
-    gap: 4rem;
+    gap: 4.5rem;
     align-items: start;
   }
 
@@ -343,11 +348,13 @@ footer {
     text-align: left;
     margin-bottom: 0;
   }
-  .home .masthead .portrait { margin-left: 0; margin-right: 0; }
+  .home .masthead .portrait { margin-left: 0; margin-right: 0; width: 96px; height: 96px; }
+  .home .masthead .rail-links { display: block; }
+  .home .masthead .rail-links a { display: block; margin-bottom: 0.32rem; }
   .home .masthead h1 { font-size: 1.72rem; }
   .home .masthead .subtitle { font-size: 0.98rem; }
 
-  .home-main { max-width: 36rem; min-width: 0; }
+  .home-main { max-width: 37rem; min-width: 0; }
   .home-main > h2:first-of-type { margin-top: 0; }
 
   /* articles get a slightly longer line, and less dead space above */
