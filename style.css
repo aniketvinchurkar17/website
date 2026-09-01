@@ -378,3 +378,153 @@ h2.person {
   font-size: 0.95rem;
   margin-bottom: 0.95rem;
 }
+
+/* ---------- view toggle + card deck (progressive enhancement) ---------- */
+
+.viewtoggle {
+  display: flex;
+  margin: 0 0 2.2rem;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.viewtoggle button {
+  appearance: none;
+  font: inherit;
+  letter-spacing: inherit;
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--hairline);
+  padding: 0.42rem 0.9rem;
+  cursor: pointer;
+}
+.viewtoggle button + button { border-left: none; }
+.viewtoggle button[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+.viewtoggle button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+/* hide the list while the deck is showing */
+.home-main.cards-on > *:not(.viewtoggle):not(.deck) { display: none; }
+
+.deck-stack {
+  position: relative;
+  max-width: 24rem;
+  height: 25rem;
+  margin-bottom: 1.4rem;
+}
+
+.card {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  border: 1px solid var(--ink);
+  padding: 1.5rem 1.45rem;
+  cursor: grab;
+  touch-action: pan-y;
+  will-change: transform;
+  transition: transform 0.22s ease, opacity 0.22s ease;
+}
+.card.is-dragging { cursor: grabbing; transition: none; }
+.card.is-link { cursor: pointer; }
+
+.card-kind {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin: 0 0 0.7rem;
+}
+.card-title {
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 1.22;
+  margin: 0 0 0.5rem;
+}
+.card-meta {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--faint);
+  margin: 0 0 0.6rem;
+}
+.card-note {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+  overflow: hidden;
+}
+.card-title + .card-note { margin-top: 0.1rem; }
+.card-cta {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  margin: auto 0 0;
+  padding-top: 1rem;
+}
+
+.deck-done {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  border: 1px dashed var(--hairline);
+  color: var(--muted);
+}
+.deck-done p { margin: 0; }
+.deck-again {
+  appearance: none;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  padding: 0.42rem 0.9rem;
+  cursor: pointer;
+}
+
+.deck-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.deck-btn {
+  appearance: none;
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--hairline);
+  width: 2.2rem;
+  height: 2.2rem;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.deck-btn:hover:not(:disabled) { border-color: var(--ink); }
+.deck-btn:disabled { opacity: 0.3; cursor: default; }
+.deck-count {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--faint);
+}
+.deck-hint {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  line-height: 1.5;
+  color: var(--faint);
+  margin: 0.9rem 0 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card { transition: none; }
+}
