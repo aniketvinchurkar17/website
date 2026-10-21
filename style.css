@@ -76,6 +76,12 @@ body {
   font-size: 1.12rem;
 }
 
+.masthead .creds {
+  margin: 0.2rem 0 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
 .masthead .meta {
   margin: 0.4rem 0 0;
   font-family: var(--mono);
@@ -105,7 +111,11 @@ h3 {
 
 p { margin: 0 0 1.05rem; }
 
-.lede { margin-bottom: 1.4rem; }
+.lede {
+  font-size: 1.08rem;
+  line-height: 1.58;
+  margin-bottom: 1.4rem;
+}
 
 /* ---------- links ---------- */
 
@@ -126,9 +136,13 @@ a:hover { text-decoration-color: currentColor; }
   display: flex;
   align-items: baseline;
   gap: 0.75rem;
-  padding: 0.42rem 0;
+  padding: 0.52rem 0.55rem 0.52rem 0;
   border-bottom: 1px solid var(--hairline);
+  margin-left: -0.55rem;
+  padding-left: 0.55rem;
+  transition: background-color 0.12s ease;
 }
+.list li:hover { background: var(--chip); }
 .list li:last-child { border-bottom: none; }
 
 .list .t { flex: 1 1 auto; }
@@ -413,7 +427,7 @@ h2.person {
 .deck-stack {
   position: relative;
   max-width: 24rem;
-  height: 25rem;
+  height: 21.5rem;
   margin-bottom: 1.4rem;
 }
 
@@ -527,4 +541,15 @@ h2.person {
 
 @media (prefers-reduced-motion: reduce) {
   .card { transition: none; }
+}
+
+/* ---------- keyboard focus ---------- */
+
+a:focus-visible,
+.deck-btn:focus-visible,
+.deck-again:focus-visible,
+.card:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+  border-radius: 1px;
 }
