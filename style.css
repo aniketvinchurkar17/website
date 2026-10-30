@@ -593,3 +593,108 @@ a:focus-visible,
   .pagenav { flex-direction: column; gap: 1.1rem; }
   .pagenav .next { text-align: left; }
 }
+
+/* ---------- typing test ---------- */
+
+.tt-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 2.2rem;
+  padding-bottom: 0.9rem;
+  margin-bottom: 1.6rem;
+  border-bottom: 1px solid var(--rule);
+}
+.tt-stat { display: flex; flex-direction: column; gap: 0.15rem; }
+.tt-k {
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.tt-v {
+  font-family: var(--mono);
+  font-size: 1.25rem;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.tt-passage {
+  font-size: 1.22rem;
+  line-height: 1.85;
+  margin: 0 0 1.2rem;
+  letter-spacing: 0.005em;
+  cursor: text;
+}
+.tt-passage .w  { display: inline-block; white-space: nowrap; }
+.tt-passage .sp { white-space: pre-wrap; }
+.tt-passage .pend { color: var(--faint); }
+.tt-passage .ok   { color: var(--ink); }
+.tt-passage .bad  { background: var(--ink); color: var(--bg); }
+.tt-passage .cur  {
+  color: var(--faint);
+  box-shadow: inset 2px 0 0 var(--ink);
+}
+#typing.is-live .tt-passage .cur { animation: tt-caret 1.05s steps(1) infinite; }
+@keyframes tt-caret {
+  0%, 49%   { box-shadow: inset 2px 0 0 var(--ink); }
+  50%, 100% { box-shadow: inset 2px 0 0 transparent; }
+}
+
+/* the real input is offscreen; the passage is the interface */
+.tt-input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  left: -9999px;
+}
+
+.tt-note {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  color: var(--faint);
+  min-height: 1.1rem;
+  margin: 0 0 1.2rem;
+}
+
+#typing { margin-bottom: 2.4rem; }
+
+.tt-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 0.9rem;
+}
+.tt-btn {
+  appearance: none;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--hairline);
+  padding: 0.42rem 0.9rem;
+  cursor: pointer;
+}
+.tt-btn:hover { border-color: var(--ink); }
+.tt-btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.tt-source {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--faint);
+  margin-left: auto;
+}
+
+.tt-passage .pend { color: var(--faint); }
+
+@media (max-width: 34rem) {
+  .tt-stats { gap: 0 1.4rem; }
+  .tt-v { font-size: 1.1rem; }
+  .tt-passage { font-size: 1.1rem; line-height: 1.8; }
+  .tt-source { margin-left: 0; width: 100%; }
+}
