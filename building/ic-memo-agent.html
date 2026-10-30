@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IC Memo Auto-drafter &mdash; Aniket Vinchurkar</title>
+<meta name="description" content="A multi-agent diligence tool. Type a company name, get a structured investment committee memo back in about two minutes.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css?v=5">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "IC Memo Auto-drafter",
+ "description": "A multi-agent diligence tool. Type a company name, get a structured investment committee memo back in about two minutes.",
+ "datePublished": "2026-10-30",
+ "url": "https://aniketvinchurkar.com/building/ic-memo-agent.html",
+ "image": "https://aniketvinchurkar.com/og/building-ic-memo-agent.png",
+ "author": {
+  "@type": "Person",
+  "name": "Aniket Vinchurkar",
+  "url": "https://aniketvinchurkar.com/"
+ },
+ "publisher": {
+  "@type": "Person",
+  "name": "Aniket Vinchurkar"
+ }
+}
+</script>
+<link rel="alternate" type="application/rss+xml" title="Aniket Vinchurkar" href="https://aniketvinchurkar.com/feed.xml">
+
+<link rel="canonical" href="https://aniketvinchurkar.com/building/ic-memo-agent.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aniket Vinchurkar">
+<meta property="og:url" content="https://aniketvinchurkar.com/building/ic-memo-agent.html">
+<meta property="og:title" content="IC Memo Auto-drafter — Aniket Vinchurkar">
+<meta property="og:description" content="A multi-agent diligence tool. Type a company name, get a structured investment committee memo back in about two minutes.">
+<meta property="og:image" content="https://aniketvinchurkar.com/og/building-ic-memo-agent.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@AniVinchurkar">
+<meta name="twitter:title" content="IC Memo Auto-drafter — Aniket Vinchurkar">
+<meta name="twitter:description" content="A multi-agent diligence tool. Type a company name, get a structured investment committee memo back in about two minutes.">
+<meta name="twitter:image" content="https://aniketvinchurkar.com/og/building-ic-memo-agent.png">
+</head>
+<body>
+<div class="wrap">
+<a class="backlink" href="../">&larr; Aniket Vinchurkar</a>
+
+<article>
+  <header>
+    <p class="kicker">Built</p>
+    <h1>IC Memo Auto-drafter</h1>
+    <p class="standfirst">Type a company name. Get a structured investment committee memo
+    back in about two minutes.</p>
+    <p class="byline">Aniket Vinchurkar</p>
+  </header>
+
+  <p>
+    I wanted to know how much of a junior analyst&rsquo;s diligence workflow an autonomous
+    agent could actually do &mdash; not the summarising, which is easy, but the part where
+    you decide what to look into next. So I built it and watched where it broke.
+  </p>
+
+  <h2>What it does</h2>
+
+  <p>
+    You give it a company. It researches it across the web, drafts a two-page IC memo
+    &mdash; TL;DR, business, market, team, traction, thesis, risks, comparables, open
+    questions &mdash; and then criticises its own draft. A typical run is 60 to 180 seconds
+    and 8 to 15 autonomous tool calls.
+  </p>
+
+  <p>
+    Three agents, each with one job:
+  </p>
+
+  <ul>
+    <li><strong>Researcher.</strong> Runs in a loop with web search and page fetch, deciding
+    what to pull on and when it has enough.</li>
+    <li><strong>Writer.</strong> Turns the research into the memo.</li>
+    <li><strong>Critic.</strong> Reads the memo as a sceptical IC partner and flags missing
+    data, weak claims and unsupported recommendations.</li>
+  </ul>
+
+  <h2>Why it is actually agentic</h2>
+
+  <p>
+    Most things labelled AI tools are a single call: prompt in, text out. This isn&rsquo;t,
+    and the difference is the Researcher&rsquo;s loop. It plans an opening set of queries,
+    reads what comes back, judges whether a result is useful or marketing copy, pivots when
+    a thread dead-ends, fetches the full page when a snippet looks promising but incomplete,
+    and decides for itself when to stop.
+  </p>
+
+  <p>
+    There is no hardcoded workflow. It can hit a dead end and recover, and it triangulates
+    across sources rather than trusting the first one. On the sample run it made eleven tool
+    calls in 142 seconds and the trace is in the repo, so you can see what it chose to chase.
+  </p>
+
+  <h2>What it will not do</h2>
+
+  <p>
+    This is the part I care about, because a diligence tool that overstates itself is worse
+    than no tool.
+  </p>
+
+  <ul>
+    <li><strong>Public data only.</strong> No private financials, no cap tables, no founder
+    calls.</li>
+    <li><strong>It does not model.</strong> The memo says &ldquo;revenue: not
+    disclosed&rdquo; rather than inventing a number. That is deliberate. A fabricated figure
+    in an IC memo is worse than a blank.</li>
+    <li><strong>The critic does not re-trigger research.</strong> It flags the gap; it
+    doesn&rsquo;t go fill it. That loop is the obvious v2.</li>
+    <li><strong>Search depth is the ceiling.</strong> A broad web index is not Crunchbase or
+    Tracxn. A production version would plug into those, plus MCA filings for Indian
+    companies.</li>
+  </ul>
+
+  <h2>What I would build next</h2>
+
+  <p>
+    Close the critic-researcher loop so a flagged gap triggers targeted re-research. Add
+    screening: give it a sector thesis, get back a ranked list of twenty companies with a
+    one-pager each. Add a diff mode that re-runs on the same company six months later and
+    reports only what changed &mdash; which is the version I would actually use.
+  </p>
+
+  <p class="footnote">
+    Python, Claude with tool use, Tavily for search, Streamlit for the UI.
+    <a href="https://github.com/aniketvinchurkar17/ic-memo-agent">Source and a full sample
+    run on GitHub</a>.
+  </p>
+
+</article>
+
+<nav class="pagenav">
+  <span class="pn"></span>
+  <a class="pn next" href="../building/undo.html"><span class="pn-dir">Next &rarr;</span><span class="pn-t">UnDo</span></a>
+</nav>
+
+<footer>
+  <span><a href="../">Home</a></span>
+  <span><a href="mailto:aniketvinchurkar17@gmail.com">Email</a></span>
+  <span><a href="https://www.linkedin.com/in/ahvinchurkar">LinkedIn</a></span>
+</footer>
+
+</div>
+</body>
+</html>
