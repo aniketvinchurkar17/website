@@ -6,7 +6,7 @@
 <title>Aniket Vinchurkar</title>
 <meta name="description" content="Aniket Vinchurkar — things I've built, essays on how Indian markets price things, and investment theses.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
 
 <link rel="canonical" href="https://aniketvinchurkar.com/">
 <meta property="og:type" content="website">
@@ -71,6 +71,29 @@
   </header>
 
   <main class="home-main">
+
+    <section id="typing" class="tt-home" hidden>
+      <p class="tt-lead">Type a line I wrote. The clock starts when you do.</p>
+
+      <p class="tt-passage"></p>
+      <input class="tt-input" type="text" autocomplete="off" autocorrect="off"
+             autocapitalize="off" spellcheck="false" aria-label="Type the passage above">
+
+      <div class="tt-stats">
+        <div class="tt-stat"><span class="tt-k">wpm</span><span class="tt-v" data-stat="wpm">&mdash;</span></div>
+        <div class="tt-stat"><span class="tt-k">accuracy</span><span class="tt-v" data-stat="acc">&mdash;</span></div>
+        <div class="tt-stat"><span class="tt-k">time</span><span class="tt-v" data-stat="time">&mdash;</span></div>
+        <div class="tt-stat"><span class="tt-k">your best</span><span class="tt-v" data-stat="best">&mdash;</span></div>
+      </div>
+
+      <p class="tt-note"></p>
+
+      <div class="tt-controls">
+        <button type="button" class="tt-btn" data-act="again">Again</button>
+        <button type="button" class="tt-btn" data-act="new">New line</button>
+        <span class="tt-source"></span>
+      </div>
+    </section>
 
     <p class="lede">
       I build things to answer questions I couldn&rsquo;t get a straight number for, and
@@ -180,6 +203,7 @@
   </main>
 
 </div>
+<script src="typing.js?v=2" defer></script>
 <script src="deck.js?v=1" defer></script>
 </body>
 </html>
