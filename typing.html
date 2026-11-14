@@ -1,79 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
+<!--
+  Hello. If you are reading this, you opened the hood.
+  There is no framework here and no build step: one stylesheet, three small scripts,
+  two typefaces, all served from this domain. Nothing is watching you read.
+-->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>How fast do you type? &mdash; Aniket Vinchurkar</title>
-<meta name="description" content="A typing test where the passages are lines from the writing on this site. Because why not.">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=7">
+<title>Lines of mine, for typing &mdash; Aniket Vinchurkar</title>
+<meta name="description" content="A typing test where every line is an argument from my own writing. Because why not.">
 <link rel="canonical" href="https://aniketvinchurkar.com/typing.html">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css?v=1">
+<script src="/assets/sky.js?v=1"></script>
 <link rel="alternate" type="application/rss+xml" title="Aniket Vinchurkar" href="https://aniketvinchurkar.com/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Aniket Vinchurkar">
 <meta property="og:url" content="https://aniketvinchurkar.com/typing.html">
-<meta property="og:title" content="How fast do you type? &mdash; Aniket Vinchurkar">
-<meta property="og:description" content="A typing test where the passages are lines from the writing on this site. Because why not.">
+<meta property="og:title" content="Lines of mine, for typing &mdash; Aniket Vinchurkar">
+<meta property="og:description" content="A typing test where every line is an argument from my own writing. Because why not.">
 <meta property="og:image" content="https://aniketvinchurkar.com/og/typing.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@AniVinchurkar">
-<meta name="twitter:title" content="How fast do you type? &mdash; Aniket Vinchurkar">
-<meta name="twitter:description" content="A typing test where the passages are lines from the writing on this site. Because why not.">
 <meta name="twitter:image" content="https://aniketvinchurkar.com/og/typing.png">
 </head>
 <body>
-<div class="wrap">
-<a class="backlink" href="./">&larr; Aniket Vinchurkar</a>
+<header class="top">
+  <a class="mark" href="/">Aniket Vinchurkar</a>
+  <div class="sky">
+    <svg class="arc" viewBox="0 0 120 44" aria-hidden="true">
+      <path class="path" d="M10 38 A50 32 0 0 1 110 38"/>
+      <path class="horizon" d="M2 38 H118"/>
+      <circle class="orb" r="5.5" cx="60" cy="6"/>
+      <circle class="bite" r="5" cx="63" cy="4"/>
+    </svg>
+    <span class="clock"><span class="city">Mumbai </span><time id="clock"></time></span>
+    <button class="skybtn" type="button">sky: live</button>
+  </div>
+</header>
 
-<article>
-  <header>
-    <p class="kicker">Diversion</p>
-    <h1>How fast do you type?</h1>
-    <p class="standfirst">The passages are lines from the writing on this site, so you get a
-    reading out of it either way.</p>
-  </header>
-
-  <p id="tt-nojs" class="footnote">This one needs JavaScript, which appears to be off.</p>
-
-  <section id="typing" hidden>
-    <div class="tt-stats">
-      <div class="tt-stat"><span class="tt-k">wpm</span><span class="tt-v" data-stat="wpm">&mdash;</span></div>
-      <div class="tt-stat"><span class="tt-k">accuracy</span><span class="tt-v" data-stat="acc">&mdash;</span></div>
-      <div class="tt-stat"><span class="tt-k">time</span><span class="tt-v" data-stat="time">&mdash;</span></div>
-      <div class="tt-stat"><span class="tt-k">your best</span><span class="tt-v" data-stat="best">&mdash;</span></div>
-    </div>
-
-    <p class="tt-passage"></p>
-    <input class="tt-input" type="text" autocomplete="off" autocorrect="off"
-           autocapitalize="off" spellcheck="false" aria-label="Type the passage above">
-
-    <p class="tt-note"></p>
-
-    <div class="tt-controls">
-      <button type="button" class="tt-btn" data-act="again">Again</button>
-      <button type="button" class="tt-btn" data-act="new">New passage</button>
-      <span class="tt-source"></span>
-    </div>
+<main>
+  <h1 class="vh">Lines of mine, for typing</h1>
+  <div class="wrap">
+  <section class="typer" data-typer data-autofocus>
+    <span class="label"><b>A line of mine.</b> Type it, or just read it.</span>
+    <p class="line"><span class="no-js-line">PPP is not a fact about a country. It is a fact about a basket.</span></p>
+    <input class="typer-input" type="text" autocomplete="off" autocorrect="off" autocapitalize="off"
+           spellcheck="false" aria-label="Type the line shown above">
+    <div class="typer-foot"><span class="src">from <a href="/essays/gen-z-ppp.html">PPP Is Not a Fact About a Country</a></span></div>
   </section>
-
-  <p class="footnote">
-    Words per minute counts correct characters in fives, the usual convention. Accuracy is
-    keystrokes that landed on the right character the first time, so backspacing your way to
-    a clean passage still costs you. Your best is kept in your own browser and goes nowhere
-    near mine. Escape starts over.
-  </p>
-
-</article>
-
-<footer>
-  <span><a href="./">Home</a></span>
-  <span><a href="mailto:aniketvinchurkar17@gmail.com">Email</a></span>
-  <span><a href="https://www.linkedin.com/in/ahvinchurkar">LinkedIn</a></span>
+  <section class="shelf">
+    <h2><span class="num">&para;</span>Every line in the hat</h2>
+    <p class="aside">Each is something I have argued in writing. Words per minute counts correct
+    characters in fives; &ldquo;clean&rdquo; is keystrokes that landed right the first time, so
+    backspacing still costs you. Your best stays in your own browser.</p>
+    <ol class="lines">
+      <li>PPP is not a fact about a country. It is a fact about a basket.<small>from <a href="/essays/gen-z-ppp.html">PPP Is Not a Fact About a Country</a></small></li>
+      <li>At 1.7:1, that $100k offer isnât 30 LPA. Itâs closer to 55. Nobody is pricing it that way yet.<small>from <a href="/essays/gen-z-ppp.html">PPP Is Not a Fact About a Country</a></small></li>
+      <li>A specialty coffee in a Bandra cafe costs the same as in the US.<small>from <a href="/essays/gen-z-ppp.html">PPP Is Not a Fact About a Country</a></small></li>
+      <li>India has clinical excellence. What it lacks is reliability as a product.<small>from <a href="/theses/medical-tourism.html">Indiaâs Foreigner-First Hospital Brand</a></small></li>
+      <li>Wedges win empires. Empires donât create wedges.<small>from <a href="/theses/medical-tourism.html">Indiaâs Foreigner-First Hospital Brand</a></small></li>
+      <li>This is my portfolio of people I am long on without the market knowing much about them.<small>from <a href="/essays/people.html">People Iâm Long On</a></small></li>
+      <li>Smart people change orbits easily.<small>from <a href="/essays/people.html">People I’m Long On</a></small></li>
+    </ol>
+  </section>
+  <footer class="foot">
+  <p class="end">That&rsquo;s the end of the page. The internet rarely lets you reach one.</p>
+  <p>No cookies, no analytics, no pop-ups, nothing recommended. Every file here loads from this
+  domain and nowhere else.</p>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/feed.xml">RSS</a>
+    <a href="/typing.html">Type a line</a>
+    <a href="/colophon.html">Colophon</a>
+    <a href="/typing.html" data-wander>Wander &#8605;</a>
+  </nav>
+  <p class="tended">Last tended 14 Nov 2026 &middot; lit by the sky over Mumbai</p>
 </footer>
-
-</div>
-<script src="typing.js?v=1" defer></script>
+  </div>
+</main>
+<script src="/assets/site.js?v=1" defer></script>
+<script src="/assets/type.js?v=1" defer></script>
 </body>
 </html>

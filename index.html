@@ -1,26 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
+<!--
+  Hello. If you are reading this, you opened the hood.
+  There is no framework here and no build step: one stylesheet, three small scripts,
+  two typefaces, all served from this domain. Nothing is watching you read.
+-->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aniket Vinchurkar</title>
-<meta name="description" content="Aniket Vinchurkar — things I've built, essays on how Indian markets price things, and investment theses.">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=7">
-
+<meta name="description" content="Things I&#x27;ve built, essays on how Indian markets actually price things, and the bets I&#x27;d make. A quiet corner, off the feed.">
 <link rel="canonical" href="https://aniketvinchurkar.com/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css?v=1">
+<script src="/assets/sky.js?v=1"></script>
+<link rel="alternate" type="application/rss+xml" title="Aniket Vinchurkar" href="https://aniketvinchurkar.com/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Aniket Vinchurkar">
 <meta property="og:url" content="https://aniketvinchurkar.com/">
-<meta property="og:title" content="Aniket Vinchurkar — Strategy &amp; Founder’s Office">
-<meta property="og:description" content="Aniket Vinchurkar — things I&#x27;ve built, essays on how Indian markets price things, and investment theses.">
+<meta property="og:title" content="Aniket Vinchurkar">
+<meta property="og:description" content="Things I&#x27;ve built, essays on how Indian markets actually price things, and the bets I&#x27;d make. A quiet corner, off the feed.">
 <meta property="og:image" content="https://aniketvinchurkar.com/og/home.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@AniVinchurkar">
-<meta name="twitter:title" content="Aniket Vinchurkar — Strategy &amp; Founder’s Office">
-<meta name="twitter:description" content="Aniket Vinchurkar — things I&#x27;ve built, essays on how Indian markets price things, and investment theses.">
 <meta name="twitter:image" content="https://aniketvinchurkar.com/og/home.png">
 <script type="application/ld+json">
 {
@@ -31,11 +36,6 @@
  "image": "https://aniketvinchurkar.com/portrait.jpg",
  "jobTitle": "Founder's Office",
  "email": "mailto:aniketvinchurkar17@gmail.com",
- "address": {
-  "@type": "PostalAddress",
-  "addressLocality": "Mumbai",
-  "addressCountry": "IN"
- },
  "alumniOf": {
   "@type": "CollegeOrUniversity",
   "name": "Indian Institute of Technology Guwahati"
@@ -51,159 +51,138 @@
  ]
 }
 </script>
-<link rel="alternate" type="application/rss+xml" title="Aniket Vinchurkar" href="https://aniketvinchurkar.com/feed.xml">
 </head>
 <body>
-<div class="wrap home">
+<header class="top">
+  <a class="mark" href="/">Aniket Vinchurkar</a>
+  <div class="sky">
+    <svg class="arc" viewBox="0 0 120 44" aria-hidden="true">
+      <path class="path" d="M10 38 A50 32 0 0 1 110 38"/>
+      <path class="horizon" d="M2 38 H118"/>
+      <circle class="orb" r="5.5" cx="60" cy="6"/>
+      <circle class="bite" r="5" cx="63" cy="4"/>
+    </svg>
+    <span class="clock"><span class="city">Mumbai </span><time id="clock"></time></span>
+    <button class="skybtn" type="button">sky: live</button>
+  </div>
+</header>
 
-  <header class="masthead">
-    <img class="portrait" src="portrait.jpg" alt="Aniket Vinchurkar">
-    <h1>Aniket Vinchurkar</h1>
-    <p class="subtitle">Strategy &amp; Founder&rsquo;s Office</p>
-    <p class="creds">ex-BCG &middot; IIT Guwahati</p>
-    <p class="meta">Mumbai, India</p>
-    <nav class="rail-links">
-      <a href="mailto:aniketvinchurkar17@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/ahvinchurkar">LinkedIn</a>
-      <a href="https://twitter.com/AniVinchurkar">Twitter</a>
-      <a href="https://github.com/aniketvinchurkar17">GitHub</a>
-    </nav>
-  </header>
+<main>
+  <h1 class="vh">Aniket Vinchurkar</h1>
+  <div class="wrap">
+  <section class="typer" data-typer data-autofocus>
+    <span class="label"><b>A line of mine.</b> Type it, or just read it.</span>
+    <p class="line"><span class="no-js-line">PPP is not a fact about a country. It is a fact about a basket.</span></p>
+    <input class="typer-input" type="text" autocomplete="off" autocorrect="off" autocapitalize="off"
+           spellcheck="false" aria-label="Type the line shown above">
+    <div class="typer-foot"><span class="src">from <a href="/essays/gen-z-ppp.html">PPP Is Not a Fact About a Country</a></span></div>
+  </section>
 
-  <main class="home-main">
-
-    <section id="typing" class="tt-home" hidden>
-      <p class="tt-lead">Type a line I wrote. The clock starts when you do.</p>
-
-      <p class="tt-passage"></p>
-      <input class="tt-input" type="text" autocomplete="off" autocorrect="off"
-             autocapitalize="off" spellcheck="false" aria-label="Type the passage above">
-
-      <div class="tt-stats">
-        <div class="tt-stat"><span class="tt-k">wpm</span><span class="tt-v" data-stat="wpm">&mdash;</span></div>
-        <div class="tt-stat"><span class="tt-k">accuracy</span><span class="tt-v" data-stat="acc">&mdash;</span></div>
-        <div class="tt-stat"><span class="tt-k">time</span><span class="tt-v" data-stat="time">&mdash;</span></div>
-        <div class="tt-stat"><span class="tt-k">your best</span><span class="tt-v" data-stat="best">&mdash;</span></div>
-      </div>
-
-      <p class="tt-note"></p>
-
-      <div class="tt-controls">
-        <button type="button" class="tt-btn" data-act="again">Again</button>
-        <button type="button" class="tt-btn" data-act="new">New line</button>
-        <span class="tt-source"></span>
-      </div>
-    </section>
-
-    <p class="lede">
-      I build things to answer questions I couldn&rsquo;t get a straight number for, and
-      write up what they turn out to say. Mostly about how Indian markets actually price
-      things &mdash; consumption, healthcare, talent.
+  <section class="letter">
+    <figure class="photo">
+      <img src="/portrait.jpg" width="400" height="400" alt="Aniket Vinchurkar">
+      <figcaption>Aniket &middot; Mumbai</figcaption>
+    </figure>
+    <p class="hello">Hello. You&rsquo;ve wandered off the feed.</p>
+    <p>
+      Whatever sent you here, nothing on this page is trying to keep you. It is just where I
+      put things. I&rsquo;m Aniket. By day I work in the Founder&rsquo;s Office at PhiCommerce,
+      a payments company; before that, CashFlo and BCG.
     </p>
+    <p>
+      On the side I build small tools to get the numbers nobody would give me straight, and
+      then I write down what the numbers said. All of it is below. Start anywhere, leave
+      whenever.
+    </p>
+    <p class="sig">&mdash; Aniket</p>
+  </section>
 
-    <h2>Built</h2>
-    <ul class="list">
+  <section class="shelf" id="built">
+    <h2><span class="num">I</span>Things I built</h2>
+    <p class="aside">Each one exists because I wanted an answer and couldn&rsquo;t find it.</p>
+    <ol class="toc">
       <li>
-        <span class="t">
-          <a href="https://anik-eta.vercel.app">Real Rate</a>
-          <span class="note">What would you need to earn there to live the way you live here?
-          Nine questions about how you actually spend become your own consumption basket, and
-          the answer is computed after tax on both sides. Reproduces the World Bank factor as
-          a control, then shows what your basket does to it.</span>
-        </span>
+        <a href="https://anik-eta.vercel.app"><span class="t">Real Rate</span><span class="dots"></span><span class="k">live &#8599;</span></a>
+        <p>A salary converter that argues back. Nine questions about how you actually spend become your own consumption basket; it then tells you what you would need to earn there to live the way you live here, after tax on both sides.</p>
       </li>
       <li>
-        <span class="t">
-          <a href="building/ic-memo-agent.html">IC Memo Auto-drafter</a>
-          <span class="note">Type a company name, get a structured investment committee memo
-          back in about two minutes. Three agents: one researches in an autonomous loop, one
-          drafts, one tears the draft apart as a sceptical IC partner.</span>
-        </span>
+        <a href="/building/ic-memo-agent.html"><span class="t">IC Memo Auto-drafter</span><span class="dots"></span><span class="k">agents</span></a>
+        <p>Type a company name, get an investment committee memo in about two minutes. One agent researches in a loop, one drafts, one tears the draft apart as a sceptical partner.</p>
       </li>
       <li>
-        <span class="t">
-          <a href="building/undo.html">UnDo</a>
-          <span class="note">A Chrome extension that will not let you write a task down until
-          you have said whether it is urgent and whether it is important.</span>
-        </span>
+        <a href="/building/undo.html"><span class="t">UnDo</span><span class="dots"></span><span class="k">chrome extension</span></a>
+        <p>A to-do list that will not let you write a task down until you have said whether it is urgent and whether it is important.</p>
       </li>
+    </ol>
+  </section>
+
+  <section class="shelf" id="written">
+    <h2><span class="num">II</span>Things I wrote</h2>
+    <ol class="toc">
+      <li>
+        <a href="/essays/gen-z-ppp.html"><span class="t">PPP Is Not a Fact About a Country</span><span class="dots"></span><span class="k">essay</span></a>
+        <p>Every salary converter runs on a basket of cereals, rent and fuel. Urban Gen Z does not spend against it. The real ratio is closer to 1.7:1 than 3:1.</p>
+      </li>
+      <li>
+        <a href="/essays/people.html"><span class="t">People I&rsquo;m Long On</span><span class="dots"></span><span class="k">portfolio</span></a>
+        <p>Four people I have watched up close who are, in my reading, badly underpriced by everyone who has not met them.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="shelf" id="bets">
+    <h2><span class="num">III</span>Bets I&rsquo;d make</h2>
+    <p class="aside">Investment theses, written the way I would want one handed to me.</p>
+    <ol class="toc">
+      <li>
+        <a href="/theses/patient-specific-implants.html"><span class="t">Patient-Specific Implants</span><span class="dots"></span><span class="k">thesis</span></a>
+        <p>Custom 3D-printed prosthetics and implants in India. The printer was never the hard part.</p>
+      </li>
+      <li>
+        <a href="/theses/medical-tourism.html"><span class="t">India&rsquo;s Foreigner-First Hospital Brand</span><span class="dots"></span><span class="k">thesis</span></a>
+        <p>India already treats the world. It has no hospital brand the world can name. Build a Cleveland Clinic-level moat, priced like India.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="shelf" id="path">
+    <h2><span class="num">IV</span>Where I&rsquo;ve been</h2>
+    <ul class="path">
+      <li><span class="y">2024 &mdash; now</span><span><b>PhiCommerce</b>, Founder&rsquo;s Office. <span class="d">Two products built from zero, plus governance, AI adoption and the odd project nobody else owns.</span></span></li>
+      <li><span class="y">2024</span><span><b>CashFlo</b>, Founder&rsquo;s Office. <span class="d">A post-merger integration, go-to-market for AP automation, and a pricing overhaul.</span></span></li>
+      <li><span class="y">2022 &mdash; 24</span><span><b>BCG</b>, Associate. <span class="d">Sports rights diligence, a corporate lending redesign at a bank, dealer-led distribution for a consumer goods company.</span></span></li>
+      <li><span class="y">2018 &mdash; 22</span><span><b>IIT Guwahati</b>, mechanical engineering. <span class="d">Co-founded Osmosis, an academic repository students actually used. Ran the Entrepreneurship Cell.</span></span></li>
     </ul>
+  </section>
 
-    <h2>Writing</h2>
-    <ul class="list">
-      <li>
-        <span class="t">
-          <a href="essays/gen-z-ppp.html">PPP Is Not a Fact About a Country</a>
-          <span class="note">Every salary converter runs on a basket of cereals, rent and fuel.
-          Urban Gen Z does not spend against it. The real ratio is closer to 1.7:1 than 3:1.</span>
-        </span>
-      </li>
-      <li>
-        <span class="t">
-          <a href="essays/people.html">People I&rsquo;m Long On</a>
-          <span class="note">Four people I have watched up close who are, in my reading,
-          badly underpriced by everyone who hasn&rsquo;t met them.</span>
-        </span>
-      </li>
+  <section class="shelf reach" id="write">
+    <h2><span class="num">V</span>Write to me</h2>
+    <p class="aside">If something here is wrong, that is the email I would most like to get.</p>
+    <p class="big"><a href="mailto:aniketvinchurkar17@gmail.com">aniketvinchurkar17@gmail.com</a></p>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/ahvinchurkar">LinkedIn</a></li>
+      <li><a href="https://twitter.com/AniVinchurkar">Twitter</a></li>
+      <li><a href="https://github.com/aniketvinchurkar17">GitHub</a></li>
+      <li><a href="/feed.xml">RSS</a></li>
     </ul>
+  </section>
 
-    <h2>Investment theses</h2>
-    <ul class="list">
-      <li>
-        <span class="t">
-          <a href="theses/patient-specific-implants.html">Patient-Specific Implants</a>
-          <span class="note">Custom 3D-printed prosthetics and implants in India. Why the
-          constraint was never the printer.</span>
-        </span>
-      </li>
-      <li>
-        <span class="t">
-          <a href="theses/medical-tourism.html">India&rsquo;s Foreigner-First Hospital Brand</a>
-          <span class="note">India is already a medical tourism hub with no globally trusted
-          brand. Build a Cleveland Clinic-level moat, priced like India.</span>
-        </span>
-      </li>
-    </ul>
-
-    <h2>Work</h2>
-
-    <div class="role">
-      <span class="chip">Founder&rsquo;s Office &middot; PhiCommerce</span>
-      <span class="d">Oct 24 &ndash; now</span>
-    </div>
-    <p>Built two products 0-to-1, plus governance, AI adoption and the odd project nobody
-    else owns.</p>
-
-    <div class="role">
-      <span class="chip">Founder&rsquo;s Office &middot; CashFlo</span>
-      <span class="d">Feb 24 &ndash; Sep 24</span>
-    </div>
-    <p>Ran a post-merger integration, owned GTM for the AP automation product, and redid
-    pricing.</p>
-
-    <div class="role">
-      <span class="chip">Associate &middot; BCG</span>
-      <span class="d">Jul 22 &ndash; Jan 24</span>
-    </div>
-    <p>Sports rights diligence, a corporate lending redesign at a bank, and moving a consumer
-    goods player to dealer-led distribution.</p>
-
-    <div class="role">
-      <span class="chip">B.Tech Mechanical &middot; IIT Guwahati</span>
-      <span class="d">Jul 18 &ndash; Jun 22</span>
-    </div>
-    <p>Co-founded Osmosis, an academic repository students actually used. Ran the
-    Entrepreneurship Cell.</p>
-
-    <footer>
-      <span>&copy; 2026 Aniket Vinchurkar</span>
-      <span><a href="typing.html">How fast do you type?</a></span>
-    </footer>
-
-  </main>
-
-</div>
-<script src="typing.js?v=2" defer></script>
-<script src="deck.js?v=1" defer></script>
+  <footer class="foot">
+  <p class="end">That&rsquo;s the end of the page. The internet rarely lets you reach one.</p>
+  <p>No cookies, no analytics, no pop-ups, nothing recommended. Every file here loads from this
+  domain and nowhere else.</p>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/feed.xml">RSS</a>
+    <a href="/typing.html">Type a line</a>
+    <a href="/colophon.html">Colophon</a>
+    <a href="/typing.html" data-wander>Wander &#8605;</a>
+  </nav>
+  <p class="tended">Last tended 14 Nov 2026 &middot; lit by the sky over Mumbai</p>
+</footer>
+  </div>
+</main>
+<script src="/assets/site.js?v=1" defer></script>
+<script src="/assets/type.js?v=1" defer></script>
 </body>
 </html>
