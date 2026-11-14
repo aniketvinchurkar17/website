@@ -1,26 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
+<!--
+  Hello. If you are reading this, you opened the hood.
+  There is no framework here and no build step: one stylesheet, three small scripts,
+  two typefaces, all served from this domain. Nothing is watching you read.
+-->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Patient-Specific Implants &mdash; Aniket Vinchurkar</title>
 <meta name="description" content="An investment thesis on custom 3D-printed prosthetics and implants in India. Why the constraint was never the printer.">
-<link rel="icon" href="../favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../style.css?v=7">
-
 <link rel="canonical" href="https://aniketvinchurkar.com/theses/patient-specific-implants.html">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css?v=1">
+<script src="/assets/sky.js?v=1"></script>
+<link rel="alternate" type="application/rss+xml" title="Aniket Vinchurkar" href="https://aniketvinchurkar.com/feed.xml">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Aniket Vinchurkar">
 <meta property="og:url" content="https://aniketvinchurkar.com/theses/patient-specific-implants.html">
-<meta property="og:title" content="Patient-Specific Implants — Aniket Vinchurkar">
+<meta property="og:title" content="Patient-Specific Implants &mdash; Aniket Vinchurkar">
 <meta property="og:description" content="An investment thesis on custom 3D-printed prosthetics and implants in India. Why the constraint was never the printer.">
 <meta property="og:image" content="https://aniketvinchurkar.com/og/theses-patient-specific-implants.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@AniVinchurkar">
-<meta name="twitter:title" content="Patient-Specific Implants — Aniket Vinchurkar">
-<meta name="twitter:description" content="An investment thesis on custom 3D-printed prosthetics and implants in India. Why the constraint was never the printer.">
 <meta name="twitter:image" content="https://aniketvinchurkar.com/og/theses-patient-specific-implants.png">
 <script type="application/ld+json">
 {
@@ -35,28 +40,36 @@
   "@type": "Person",
   "name": "Aniket Vinchurkar",
   "url": "https://aniketvinchurkar.com/"
- },
- "publisher": {
-  "@type": "Person",
-  "name": "Aniket Vinchurkar"
  }
 }
 </script>
-<link rel="alternate" type="application/rss+xml" title="Aniket Vinchurkar" href="https://aniketvinchurkar.com/feed.xml">
 </head>
 <body>
-<div class="wrap">
-<a class="backlink" href="../">&larr; Aniket Vinchurkar</a>
+<div class="progress" aria-hidden="true"></div>
+<header class="top">
+  <a class="mark" href="/">Aniket Vinchurkar</a>
+  <div class="sky">
+    <svg class="arc" viewBox="0 0 120 44" aria-hidden="true">
+      <path class="path" d="M10 38 A50 32 0 0 1 110 38"/>
+      <path class="horizon" d="M2 38 H118"/>
+      <circle class="orb" r="5.5" cx="60" cy="6"/>
+      <circle class="bite" r="5" cx="63" cy="4"/>
+    </svg>
+    <span class="clock"><span class="city">Mumbai </span><time id="clock"></time></span>
+    <button class="skybtn" type="button">sky: live</button>
+  </div>
+</header>
 
+<main class="wrap piece">
 <article>
   <header>
-    <p class="kicker">Investment thesis</p>
+    <span class="label"><b>Investment thesis</b></span>
     <h1>Patient-Specific Implants</h1>
-    <p class="standfirst">Custom 3D-printed prosthetics and implants in India. The printer
-    was never the hard part.</p>
-    <p class="byline">Aniket Vinchurkar</p>
+    <p class="standfirst">Custom 3D-printed prosthetics and implants in India. The printer was never the hard part.</p>
+    <p class="meta"><span>Aniket Vinchurkar</span><span>4 min read</span><span>Filed 29 Aug 2026</span></p>
   </header>
 
+  <div class="body">
   <h2>The claim</h2>
 
   <p>
@@ -214,20 +227,28 @@
     Absent those, this is precision manufacturing with a healthcare story attached, and it
     should be valued that way.
   </p>
-
+  </div>
 </article>
 
-<nav class="pagenav">
-  <a class="pn prev" href="../essays/people.html"><span class="pn-dir">&larr; Previous</span><span class="pn-t">People I’m Long On</span></a>
-  <a class="pn next" href="../theses/medical-tourism.html"><span class="pn-dir">Next &rarr;</span><span class="pn-t">India’s Foreigner-First Hospital Brand</span></a>
+<nav class="onward">
+  <a class="prev" href="/essays/people.html"><span class="dir">&larr; Before this</span><span class="ttl">People I&rsquo;m Long On</span></a>
+  <a class="next" href="/theses/medical-tourism.html"><span class="dir">After this &rarr;</span><span class="ttl">India&rsquo;s Foreigner-First Hospital Brand</span></a>
 </nav>
 
-<footer>
-  <span><a href="../">Home</a></span>
-  <span><a href="mailto:aniketvinchurkar17@gmail.com">Email</a></span>
-  <span><a href="https://www.linkedin.com/in/ahvinchurkar">LinkedIn</a></span>
+<footer class="foot">
+  <p class="end">That&rsquo;s the end of the page. The internet rarely lets you reach one.</p>
+  <p>No cookies, no analytics, no pop-ups, nothing recommended. Every file here loads from this
+  domain and nowhere else.</p>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/feed.xml">RSS</a>
+    <a href="/typing.html">Type a line</a>
+    <a href="/colophon.html">Colophon</a>
+    <a href="/typing.html" data-wander>Wander &#8605;</a>
+  </nav>
+  <p class="tended">Last tended 14 Nov 2026 &middot; lit by the sky over Mumbai</p>
 </footer>
-
-</div>
+</main>
+<script src="/assets/site.js?v=1" defer></script>
 </body>
 </html>
